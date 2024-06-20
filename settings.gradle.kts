@@ -1,3 +1,7 @@
+@file:Suppress("UnstableApiUsage")
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 pluginManagement {
     repositories {
         google {
@@ -20,5 +24,8 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Ticket-Found"
+
+includeBuild("build-logic")
+
 include(":app")
  
