@@ -3,8 +3,8 @@ import plugins.minSdk
 import plugins.targetSdk
 
 plugins {
-    alias(libs.plugins.android.application) apply false
-    alias(libs.plugins.jetbrains.kotlin.android) apply false
+    alias(libs.plugins.androidApplication) apply false
+    alias(libs.plugins.jetbrainsKotlinAndroid) apply false
     alias(libs.plugins.androidDefault) apply false
     alias(libs.plugins.androidBuildConfiguration)
 }
