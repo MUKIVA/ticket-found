@@ -1,5 +1,8 @@
 @file:Suppress("UnstableApiUsage")
 
+include(":ticketfound-uikit")
+
+
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
