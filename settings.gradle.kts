@@ -1,5 +1,8 @@
 @file:Suppress("UnstableApiUsage")
 
+include(":ticketfound-navigation")
+
+
 include(":ticketfound-uikit")
 
 

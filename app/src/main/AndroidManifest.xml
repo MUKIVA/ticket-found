@@ -10,6 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TicketFound"
-        android:name=".TicketFoundApp" />
+        android:name=".TicketFoundApp">
+
+        <!-- Main Activity in navigation module -->
+
+    </application>
 
 </manifest>

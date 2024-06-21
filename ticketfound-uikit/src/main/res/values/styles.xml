@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TicketFound" />
+    <style name="TicketFound.TextAppearance">
+        <item name="fontFamily">@font/sf_display</item>
+    </style>
+
+    <style name="TicketFound.TextAppearance.Title1">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontWeight">600</item>
+    </style>
+
+    <style name="TicketFound.TextAppearance.Title2">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontWeight">600</item>
+    </style>
+
+    <style name="TicketFound.TextAppearance.Title3">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontWeight">500</item>
+    </style>
+
+    <style name="TicketFound.TextAppearance.Title4">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontWeight">400</item>
+    </style>
+
+    <style name="TicketFound.TextAppearance.Text1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontWeight">400</item>
+    </style>
+
+    <style name="TicketFound.TextAppearance.Text2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontWeight">600</item>
+    </style>
+
+    <style name="TicketFound.TextAppearance.ButtonText1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontWeight">400</item>
+    </style>
+
+    <style name="TicketFound.TextAppearance.TabText">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontWeight">400</item>
+    </style>
+</resources>
