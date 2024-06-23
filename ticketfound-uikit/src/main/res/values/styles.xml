@@ -44,4 +44,27 @@
         <item name="android:textSize">10sp</item>
         <item name="android:fontWeight">400</item>
     </style>
+
+    <style name="TicketFound.DefaultButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textAppearance">@style/TicketFound.TextAppearance.ButtonText1</item>
+    </style>
+
+    <style name="TicketFound.DefaultButton.Dark">
+        <item name="android:background">@drawable/background_button_dark</item>
+        <item name="android:textColor">@color/button_dark_text</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="TicketFound.DefaultButton.Accent">
+        <item name="android:background">@drawable/background_button_accent</item>
+        <item name="android:textColor">@color/button_dark_text</item>
+    </style>
+
+    <style name="TicketFound.DefaultButton.Small">
+        <item name="android:background">@drawable/background_button_small</item>
+        <item name="android:textColor">@color/button_small_text</item>
+        <item name="android:minHeight">33dp</item>
+    </style>
+
 </resources>
