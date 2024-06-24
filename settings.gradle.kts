@@ -1,5 +1,23 @@
 @file:Suppress("UnstableApiUsage")
 
+include(":feature:subscribes")
+
+
+include(":feature:profile")
+
+
+include(":feature:shortcut")
+
+
+include(":feature:hotels")
+
+
+include(":feature:airtickets")
+
+
+include(":feature:main")
+
+
 include(":ticketfound-navigation")
 
 

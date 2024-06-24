@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/subscribesFragment"
+        android:title="@string/subscribes"
+        android:icon="@drawable/ic_notification"/>
+    <item
+        android:id="@+id/profileFragment"
+        android:title="@string/profile"
+        android:icon="@drawable/ic_human"/>
+    <item
+        android:id="@+id/shortcutFragment"
+        android:title="@string/shortcut"
+        android:icon="@drawable/ic_location"/>
+    <item
+        android:id="@+id/hotelsFragment"
+        android:title="@string/hotels"
+        android:icon="@drawable/ic_hotel"/>
+    <item
+        android:id="@+id/airTicketsFragment"
+        android:title="@string/air_tickets"
+        android:icon="@drawable/ic_plane"/>
+
+</menu>

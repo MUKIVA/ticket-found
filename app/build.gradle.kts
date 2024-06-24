@@ -30,8 +30,10 @@ android {
 }
 
 dependencies {
-
     implementation(projects.ticketfoundUikit)
+
+    implementation(projects.feature.main)
+    implementation(projects.ticketfoundNavigation)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

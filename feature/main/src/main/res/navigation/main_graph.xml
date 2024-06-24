@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/airTicketsFragment">
+
+    <fragment
+        android:id="@+id/subscribesFragment"
+        android:name="com.github.mukiva.feature.subscribes.SubscribesFragment"
+        android:label="SubscribesFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.github.mukiva.feature.profile.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/shortcutFragment"
+        android:name="com.github.mukiva.feature.shortcut.ShortcutFragment"
+        android:label="ShortcutFragment" />
+    <fragment
+        android:id="@+id/hotelsFragment"
+        android:name="com.github.mukiva.feature.hotels.HotelsFragment"
+        android:label="HotelsFragment" />
+    <fragment
+        android:id="@+id/airTicketsFragment"
+        android:name="com.github.mukiva.feature.airtickets.AirTicketsFragment"
+        android:label="AirTicketsFragment" />
+</navigation>
