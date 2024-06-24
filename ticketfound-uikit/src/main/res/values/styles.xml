@@ -67,4 +67,14 @@
         <item name="android:minHeight">33dp</item>
     </style>
 
+    <style name="TicketFound.BottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="android:background">@drawable/background_bottom_navigation</item>
+        <item name="itemIconTint">@color/bottom_navigation_primary_color</item>
+        <item name="itemTextColor">@color/bottom_navigation_primary_color</item>
+        <item name="itemTextAppearanceActive">@style/TicketFound.TextAppearance.TabText</item>
+        <item name="itemTextAppearanceInactive">@style/TicketFound.TextAppearance.TabText</item>
+        <item name="itemIconSize">24dp</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
 </resources>
