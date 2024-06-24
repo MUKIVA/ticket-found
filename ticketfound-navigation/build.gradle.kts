@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidLib)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.kotlinxSerialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hiltAndroid)
     alias(libs.plugins.androidDefault)
@@ -23,4 +24,6 @@ dependencies {
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+
+    implementation(libs.kotlinx.serialization.json)
 }
