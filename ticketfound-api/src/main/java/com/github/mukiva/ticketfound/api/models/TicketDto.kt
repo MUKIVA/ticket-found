@@ -16,17 +16,17 @@ data class TicketDto(
     @SerialName("company")
     val company: String,
     @SerialName("departure")
-    val departure: Departure,
+    val departure: DepartureDto,
     @SerialName("arrival")
-    val arrival: Arrival,
+    val arrival: ArrivalDto,
     @SerialName("has_transfer")
     val hasTransfer: Boolean,
     @SerialName("has_visa_transfer")
     val hasVisaTransfer: Boolean,
     @SerialName("luggage")
-    val luggage: Luggage,
+    val luggage: LuggageDto,
     @SerialName("hand_luggage")
-    val handLuggage: HandLuggage,
+    val handLuggage: HandLuggageDto,
     @SerialName("is_returnable")
     val isReturnable: Boolean,
     @SerialName("isExchangable")

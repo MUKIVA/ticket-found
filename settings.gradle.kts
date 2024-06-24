@@ -1,4 +1,9 @@
 @file:Suppress("UnstableApiUsage")
+
+include(":ticketfound-data")
+
+
+
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {

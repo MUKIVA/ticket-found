@@ -2,7 +2,7 @@ package com.github.mukiva.ticketfound.api
 
 import com.github.mukiva.ticketfound.api.models.OffersDto
 import com.github.mukiva.ticketfound.api.models.TicketsDto
-import com.github.mukiva.ticketfound.api.models.TicketsOffers
+import com.github.mukiva.ticketfound.api.models.TicketsOffersDto
 import com.skydoves.retrofit.adapters.result.ResultCallAdapterFactory
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
@@ -15,7 +15,7 @@ interface ITicketFoundApi {
     @GET("/offers")
     fun getOffers(): Result<OffersDto>
     @GET("/tickets_offers")
-    fun getTicketsOffers(): Result<TicketsOffers>
+    fun getTicketsOffers(): Result<TicketsOffersDto>
     @GET("/tickets")
     fun getTickets(): Result<TicketsDto>
 }

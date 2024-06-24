@@ -4,7 +4,9 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class TicketsOffers(
-    @SerialName("tickets_offers")
-    val data: List<OfferTicketsDto>
+data class LuggageDto(
+    @SerialName("has_luggage")
+    val hasLuggage: Boolean,
+    @SerialName("price")
+    val price: Price
 )

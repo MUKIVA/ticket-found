@@ -5,6 +5,9 @@ import com.github.mukiva.ticketfound.BuildConfig
 import com.github.mukiva.ticketfound.api.ITicketFoundApi
 import com.github.mukiva.ticketfound.api.createMockTicketFoundApi
 import com.github.mukiva.ticketfound.api.createRetrofit
+import com.github.mukiva.ticketfound.data.createOffersRepository
+import com.github.mukiva.ticketfound.data.createTicketsOffersRepository
+import com.github.mukiva.ticketfound.data.createTicketsRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -46,5 +49,23 @@ class DataModule {
         @ApplicationContext context: Context,
         json: Json
     ): ITicketFoundApi = createMockTicketFoundApi(context, json)
+
+    @Provides
+    @Singleton
+    fun provideOffersRepository(
+        api: ITicketFoundApi
+    ) = createOffersRepository(api)
+
+    @Provides
+    @Singleton
+    fun provideTicketsOffersRepository(
+        api: ITicketFoundApi
+    ) = createTicketsOffersRepository(api)
+
+    @Provides
+    @Singleton
+    fun provideTicketsRepository(
+        api: ITicketFoundApi
+    ) = createTicketsRepository(api)
 
 }

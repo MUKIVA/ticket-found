@@ -34,6 +34,7 @@ dependencies {
 
     implementation(projects.ticketfoundNavigation)
     implementation(projects.ticketfoundApi)
+    implementation(projects.ticketfoundData)
 
     implementation(projects.feature.main)
     implementation(projects.feature.airtickets)

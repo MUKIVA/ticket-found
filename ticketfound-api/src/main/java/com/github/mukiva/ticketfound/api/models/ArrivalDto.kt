@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
 import java.time.LocalDateTime
 
 @Serializable
-data class Departure(
+data class ArrivalDto(
     @SerialName("town")
     val town: String,
     @SerialName("date")

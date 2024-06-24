@@ -3,7 +3,7 @@ package com.github.mukiva.ticketfound.api
 import android.content.Context
 import com.github.mukiva.ticketfound.api.models.OffersDto
 import com.github.mukiva.ticketfound.api.models.TicketsDto
-import com.github.mukiva.ticketfound.api.models.TicketsOffers
+import com.github.mukiva.ticketfound.api.models.TicketsOffersDto
 import kotlinx.serialization.json.Json
 
 class TicketFoundMockApi internal constructor(
@@ -16,9 +16,9 @@ class TicketFoundMockApi internal constructor(
         json.decodeFromString<OffersDto>(content)
     }
 
-    override fun getTicketsOffers(): Result<TicketsOffers> = wrapTry {
+    override fun getTicketsOffers(): Result<TicketsOffersDto> = wrapTry {
         val content = readString("tickets_offers.json")
-        json.decodeFromString<TicketsOffers>(content)
+        json.decodeFromString<TicketsOffersDto>(content)
     }
 
     override fun getTickets(): Result<TicketsDto> = wrapTry {
