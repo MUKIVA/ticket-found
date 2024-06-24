@@ -25,4 +25,6 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
 
+    implementation(libs.adapter.delegates)
+    implementation(libs.adapter.delegates.viewbinding)
 }

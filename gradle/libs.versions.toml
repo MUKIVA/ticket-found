@@ -22,9 +22,7 @@ koltinx-serialization = "2.0.0"
 koltinx-serialization-json = "1.6.3"
 ksp = "2.0.0-1.0.21"
 androidx-navigation = "2.7.7"
-junitVersion = "4.13.2"
-androidxJunit = "1.1.5"
-espressoCore = "3.5.1"
+adapter-delegates = "4.3.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -54,13 +52,13 @@ kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core",
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "koltinx-coroutines" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "koltinx-serialization-json" }
 
+adapter-delegates = { module = "com.hannesdorfmann:adapterdelegates4-kotlin-dsl", version.ref = "adapter-delegates" }
+adapter-delegates-viewbinding = { module = "com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding", version.ref = "adapter-delegates" }
+
 # kotlin-dsl
 build-logic = { module = "com.github.mukiva:build-logic", version.ref = "buildLogic" }
 android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
-junit = { group = "junit", name = "junit", version.ref = "junitVersion" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxJunit" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

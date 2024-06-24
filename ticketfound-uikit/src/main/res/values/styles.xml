@@ -3,6 +3,7 @@
     <style name="TicketFound" />
     <style name="TicketFound.TextAppearance">
         <item name="fontFamily">@font/sf_display</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="TicketFound.TextAppearance.Title1">
@@ -75,6 +76,13 @@
         <item name="itemTextAppearanceInactive">@style/TicketFound.TextAppearance.TabText</item>
         <item name="itemIconSize">24dp</item>
         <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <style name="TicketFound.EditText">
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <item name="colorControlActivated">@android:color/transparent</item>
+        <item name="colorControlHighlight">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
     </style>
 
 </resources>
