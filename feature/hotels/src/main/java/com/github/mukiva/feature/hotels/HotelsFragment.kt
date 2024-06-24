@@ -4,6 +4,4 @@ import androidx.fragment.app.Fragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-internal class HotelsFragment : Fragment(R.layout.fragment_hotels) {
-
-}
+internal class HotelsFragment : Fragment(R.layout.fragment_hotels)

@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="subscribes">Подписки</string>
-    <string name="shortcut">Короче</string>
-    <string name="profile">Профиль</string>
-    <string name="hotels">Отели</string>
-    <string name="air_tickets">Авиабилеты</string>
+
 </resources>

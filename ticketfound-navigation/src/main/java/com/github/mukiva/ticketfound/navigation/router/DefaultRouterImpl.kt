@@ -17,6 +17,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.github.mukiva.ticketfound.navigation.domain.IRouter
 import dagger.assisted.Assisted
+import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import kotlinx.serialization.Serializable
 
@@ -28,6 +29,7 @@ internal class DefaultRouterImpl @AssistedInject constructor(
     private val activity: FragmentActivity
 ) : IRouter {
 
+    @AssistedFactory
     interface Factory {
         fun create(
             @IdRes fragmentContainerId: Int

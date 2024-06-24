@@ -6,6 +6,9 @@ plugins {
 
 android {
     namespace = "com.github.mukiva.ticketfound.uikit"
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {

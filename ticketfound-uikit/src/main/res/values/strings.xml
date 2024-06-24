@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Ticket Found</string>
+
+    <string name="subscribes">Подписки</string>
+    <string name="shortcut">Короче</string>
+    <string name="profile">Профиль</string>
+    <string name="hotels">Отели</string>
+    <string name="air_tickets">Авиабилеты</string>
+
 </resources>

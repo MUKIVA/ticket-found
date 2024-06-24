@@ -1,5 +1,7 @@
 package com.github.mukiva.ticketfound.di
 
+import com.github.mukiva.feature.main.IMainGraphProvider
+import com.github.mukiva.ticketfound.R
 import com.github.mukiva.ticketfound.navigation.router.INavigationResourceProvider
 import dagger.Module
 import dagger.Provides
@@ -15,13 +17,22 @@ class NavigationModule {
         return object : INavigationResourceProvider {
 
             override fun provideStartDestination(): Int {
-                TODO("Not yet implemented")
+                return R.id.mainFragment
             }
 
             override fun provideNavigationGraph(): Int {
-                TODO("Not yet implemented")
+                return R.navigation.navigation_application
             }
 
+        }
+    }
+
+    @Provides
+    fun provideMainGraphProvider(): IMainGraphProvider {
+        return object : IMainGraphProvider {
+            override fun provideMainGraph(): Int {
+                return R.navigation.main_graph
+            }
         }
     }
 

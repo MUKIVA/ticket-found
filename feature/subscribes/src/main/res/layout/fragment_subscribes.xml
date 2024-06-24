@@ -7,6 +7,9 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""/>
+        android:text="@string/subscribes"
+        android:textAppearance="@style/TicketFound.TextAppearance.Title1"
+        android:textSize="64sp"
+        android:layout_gravity="center"/>
 
 </FrameLayout>

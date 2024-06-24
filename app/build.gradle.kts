@@ -16,13 +16,9 @@ android {
     }
 
     hilt {
-        enableAggregatingTask = true
+        enableAggregatingTask = false
         disableCrossCompilationRootValidation = false
         enableExperimentalClasspathAggregation = false
-    }
-
-    buildFeatures {
-        viewBinding = true
     }
 
     // The general configuration is stored in the file:
@@ -32,12 +28,21 @@ android {
 dependencies {
     implementation(projects.ticketfoundUikit)
 
-    implementation(projects.feature.main)
     implementation(projects.ticketfoundNavigation)
+
+    implementation(projects.feature.main)
+    implementation(projects.feature.airtickets)
+    implementation(projects.feature.hotels)
+    implementation(projects.feature.profile)
+    implementation(projects.feature.shortcut)
+    implementation(projects.feature.subscribes)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
+
+    implementation(libs.androidx.navigation.ui)
+    implementation(libs.androidx.navigation.fragment)
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
