@@ -1,29 +1,4 @@
 @file:Suppress("UnstableApiUsage")
-
-include(":feature:subscribes")
-
-
-include(":feature:profile")
-
-
-include(":feature:shortcut")
-
-
-include(":feature:hotels")
-
-
-include(":feature:airtickets")
-
-
-include(":feature:main")
-
-
-include(":ticketfound-navigation")
-
-
-include(":ticketfound-uikit")
-
-
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
@@ -52,4 +27,16 @@ rootProject.name = "Ticket-Found"
 includeBuild("build-logic")
 
 include(":app")
+
+include(":ticketfound-api")
+include(":ticketfound-navigation")
+include(":ticketfound-uikit")
+
+include(":feature:subscribes")
+include(":feature:profile")
+include(":feature:shortcut")
+include(":feature:hotels")
+include(":feature:airtickets")
+include(":feature:main")
+
  

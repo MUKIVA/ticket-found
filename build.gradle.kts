@@ -8,6 +8,7 @@ plugins {
     alias(libs.plugins.androidDefault) apply false
     alias(libs.plugins.androidLib) apply false
     alias(libs.plugins.androidBuildConfiguration)
+    alias(libs.plugins.jetbrainsKotlinJvm) apply false
 }
 
 buildscript {
