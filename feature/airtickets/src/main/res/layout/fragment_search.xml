@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="45dp"
+    android:paddingHorizontal="16dp"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/laySearch"
+        layout="@layout/lay_search_field"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp" />
+
+    <include
+        android:id="@+id/layHints"
+        layout="@layout/lay_hints"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <include
+        android:id="@+id/layRecommendation"
+        layout="@layout/lay_recommendation_list"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+</LinearLayout>

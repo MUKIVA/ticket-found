@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="16dp"
+    android:background="@drawable/background_frame"
+    android:orientation="vertical">
+
+    <com.github.mukiva.feature.airtickets.ui.view.RecommendationView
+        android:id="@+id/recommendation1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:townName="@string/mock_recommendation_1"
+        app:image="@drawable/mock_recommendation_1" />
+
+    <com.github.mukiva.feature.airtickets.ui.view.RecommendationView
+        android:id="@+id/recommendation2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:townName="@string/mock_recommendation_2"
+        app:image="@drawable/mock_recommendation_2" />
+
+    <com.github.mukiva.feature.airtickets.ui.view.RecommendationView
+        android:id="@+id/recommendation3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:townName="@string/mock_recommendation_3"
+        app:image="@drawable/mock_recommendation_3" />
+
+</LinearLayout>

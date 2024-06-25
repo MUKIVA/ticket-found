@@ -17,9 +17,12 @@ android {
 dependencies {
 
     implementation(projects.ticketfoundUikit)
+    implementation(projects.ticketfoundData)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.lifecycle)
+    implementation(libs.androidx.fragment)
     implementation(libs.material)
 
     implementation(libs.hilt.android)
@@ -27,4 +30,7 @@ dependencies {
 
     implementation(libs.adapter.delegates)
     implementation(libs.adapter.delegates.viewbinding)
+
+    implementation(libs.androidx.navigation.ui)
+    implementation(libs.androidx.navigation.fragment)
 }

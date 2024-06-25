@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/air_tickets_graph"
+    app:startDestination="@id/airTicketsFragment">
+
+    <fragment
+        android:id="@+id/airTicketsFragment"
+        android:name="com.github.mukiva.feature.airtickets.ui.air_tickets_fragment.AirTicketsFragment"
+        android:label="AirTicketsFragment" >
+        <action
+            android:id="@+id/action_airTicketsFragment_to_hardRouteFragment"
+            app:destination="@id/hardRouteFragment" />
+        <action
+            android:id="@+id/action_airTicketsFragment_to_weekendsFragment"
+            app:destination="@id/weekendsFragment" />
+        <action
+            android:id="@+id/action_airTicketsFragment_to_anywhereFragment"
+            app:destination="@id/anywhereFragment" />
+        <action
+            android:id="@+id/action_airTicketsFragment_to_hotTicketsFragment"
+            app:destination="@id/hotTicketsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hardRouteFragment"
+        android:name="com.github.mukiva.feature.airtickets.ui.HardRouteFragment"
+        android:label="HardRouteFragment" />
+    <fragment
+        android:id="@+id/weekendsFragment"
+        android:name="com.github.mukiva.feature.airtickets.ui.WeekendsFragment"
+        android:label="WeekendsFragment" />
+    <fragment
+        android:id="@+id/anywhereFragment"
+        android:name="com.github.mukiva.feature.airtickets.ui.AnywhereFragment"
+        android:label="AnywhereFragment" />
+    <fragment
+        android:id="@+id/hotTicketsFragment"
+        android:name="com.github.mukiva.feature.airtickets.ui.HotTicketsFragment"
+        android:label="HotTicketsFragment" />
+</navigation>

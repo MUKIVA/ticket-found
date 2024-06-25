@@ -85,4 +85,20 @@
         <item name="android:background">@android:color/transparent</item>
     </style>
 
+    <style name="TicketFound.BottomSheet" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/Animation.MaterialComponents.BottomSheetDialog</item>
+        <item name="bottomSheetStyle">@style/TicketFound.BottomSheet.Modal</item>
+    </style>
+
+    <style name="TicketFound.BottomSheet.Modal">
+        <item name="android:background">@drawable/background_bottomsheet</item>
+    </style>
+    <style name="TicketFound.ImageShape" />
+    <style name="TicketFound.ImageShape.Rounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+        <item name="color">@color/white</item>
+    </style>
+
 </resources>

@@ -24,15 +24,20 @@ ksp = "2.0.0-1.0.21"
 androidx-navigation = "2.7.7"
 adapter-delegates = "4.3.2"
 junitVersion = "4.13.2"
-androidxJunit = "1.1.5"
-espressoCore = "3.5.1"
+androidxJunit = "1.2.0"
+espressoCore = "3.6.0"
 jetbrainsKotlinJvm = "2.0.0"
 okhttp = "4.12.0"
 secrets = "2.0.1"
+androidx-lifecycle = "2.8.2"
+androidx-fragment = "1.8.0"
+glide = "4.16.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-lifecycle = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
+androidx-fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "androidx-fragment" }
 
 androidx-navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "androidx-navigation" }
 androidx-navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "androidx-navigation" }
@@ -63,6 +68,8 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 
 adapter-delegates = { module = "com.hannesdorfmann:adapterdelegates4-kotlin-dsl", version.ref = "adapter-delegates" }
 adapter-delegates-viewbinding = { module = "com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding", version.ref = "adapter-delegates" }
+
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 
 # kotlin-dsl
 build-logic = { module = "com.github.mukiva:build-logic", version.ref = "buildLogic" }

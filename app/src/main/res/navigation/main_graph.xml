@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_graph"
-    app:startDestination="@id/airTicketsFragment">
+    app:startDestination="@id/airTicketsRootFragment">
 
     <fragment
         android:id="@+id/subscribesFragment"
@@ -21,7 +21,7 @@
         android:name="com.github.mukiva.feature.hotels.HotelsFragment"
         android:label="HotelsFragment" />
     <fragment
-        android:id="@+id/airTicketsFragment"
-        android:name="com.github.mukiva.feature.airtickets.AirTicketsFragment"
-        android:label="AirTicketsFragment" />
+        android:id="@+id/airTicketsRootFragment"
+        android:name="com.github.mukiva.feature.airtickets.ui.AirTicketsRootFragment"
+        android:label="AirTicketsRootFragment" />
 </navigation>

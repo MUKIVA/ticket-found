@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.github.mukiva.feature.airtickets.ui.view.HintView
+        android:id="@+id/hardRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:hintBackgroundTint="@color/green"
+        app:hintIcon="@drawable/ic_hard_route"
+        app:hintText="@string/hint_hard_route"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/anywhere"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mukiva.feature.airtickets.ui.view.HintView
+        android:id="@+id/anywhere"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:hintBackgroundTint="@color/blue"
+        app:hintIcon="@drawable/ic_planet"
+        app:hintText="@string/hint_anywhere"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/weekends"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/hardRoute"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mukiva.feature.airtickets.ui.view.HintView
+        android:id="@+id/weekends"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:hintBackgroundTint="@color/dark_blue"
+        app:hintIcon="@drawable/ic_calendar"
+        app:hintText="@string/hint_weekends"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/hotTickets"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/anywhere"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mukiva.feature.airtickets.ui.view.HintView
+        android:id="@+id/hotTickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:hintBackgroundTint="@color/red"
+        app:hintIcon="@drawable/ic_fire"
+        app:hintText="@string/hint_hot_tickets"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/weekends"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

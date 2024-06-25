@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HintView">
+        <attr name="hintBackgroundTint" format="color" />
+        <attr name="hintText" format="string" />
+        <attr name="hintIcon" format="reference" />
+    </declare-styleable>
+</resources>

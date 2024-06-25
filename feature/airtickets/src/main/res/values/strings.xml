@@ -5,4 +5,14 @@
     <string name="to_search_field_hint">Куда - Турция</string>
     <string name="search_tickets">Поиск билетов</string>
     <string name="offers_list_title">Музыкально отлететь</string>
+
+    <string name="hint_hard_route">Сложный маршрут</string>
+    <string name="hint_anywhere">Куда угодно</string>
+    <string name="hint_weekends">Выходные</string>
+    <string name="hint_hot_tickets">Горячие билеты</string>
+    <string name="popular_route">Популярное направление</string>
+
+    <string name="mock_recommendation_1">Стамбул</string>
+    <string name="mock_recommendation_2">Сочи</string>
+    <string name="mock_recommendation_3">Пхукет</string>
 </resources>

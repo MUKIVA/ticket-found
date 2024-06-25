@@ -52,12 +52,6 @@ class DataModule {
 
     @Provides
     @Singleton
-    fun provideOffersRepository(
-        api: ITicketFoundApi
-    ) = createOffersRepository(api)
-
-    @Provides
-    @Singleton
     fun provideTicketsOffersRepository(
         api: ITicketFoundApi
     ) = createTicketsOffersRepository(api)
@@ -67,5 +61,11 @@ class DataModule {
     fun provideTicketsRepository(
         api: ITicketFoundApi
     ) = createTicketsRepository(api)
+
+    @Provides
+    @Singleton
+    fun provideOffersRepository(
+        api: ITicketFoundApi
+    ) = createOffersRepository(api)
 
 }

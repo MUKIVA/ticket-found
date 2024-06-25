@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     app:cardCornerRadius="@dimen/default_card_radius"
     app:cardBackgroundColor="@color/gray_3"
-    app:contentPadding="16dp"
+    app:cardElevation="16dp"
     app:cardUseCompatPadding="true">
 
     <com.google.android.material.card.MaterialCardView
@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/gray_4"
         app:cardCornerRadius="@dimen/default_card_radius"
+        app:cardElevation="16dp"
         app:contentPadding="12dp"
         app:cardUseCompatPadding="true">
 
@@ -35,11 +36,14 @@
                 android:id="@+id/fromSearchField"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/TicketFound.TextAppearance.ButtonText1"
-                android:hint="@string/from_search_field_hint"
                 android:layout_marginStart="20dp"
-                android:background="@android:color/transparent"
                 android:paddingVertical="8dp"
+                android:textAppearance="@style/TicketFound.TextAppearance.ButtonText1"
+                android:background="@android:color/transparent"
+                android:hint="@string/from_search_field_hint"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                android:inputType="text"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/searchButton" />
@@ -57,12 +61,15 @@
                 android:id="@+id/toSearchField"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/TicketFound.TextAppearance.ButtonText1"
-                android:hint="@string/to_search_field_hint"
                 android:layout_marginStart="20dp"
                 android:paddingVertical="8dp"
+                android:textAppearance="@style/TicketFound.TextAppearance.ButtonText1"
                 android:background="@android:color/transparent"
-                app:layout_constraintTop_toBottomOf="@id/divider"
+                android:hint="@string/to_search_field_hint"
+                android:maxLines="1"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                app:layout_constraintTop_toBottomOf="@id/fromSearchField"
                 app:layout_constraintStart_toEndOf="@id/searchButton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />

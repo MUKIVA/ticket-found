@@ -7,4 +7,9 @@
     <string name="hotels">Отели</string>
     <string name="air_tickets">Авиабилеты</string>
 
+    <string name="list_state_error">Что-то пошло не так…</string>
+    <string name="list_state_empty">Мы ничего не нашли!</string>
+
+    <string name="rub_template">%1$s ₽</string>
+
 </resources>

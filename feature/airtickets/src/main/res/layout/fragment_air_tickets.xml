@@ -4,15 +4,15 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingHorizontal="16dp"
     android:orientation="vertical"
     android:gravity="center|top">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"
-        android:layout_height="108dp"
+        android:layout_height="100dp"
         android:textAppearance="@style/TicketFound.TextAppearance.Title1"
         android:paddingHorizontal="94dp"
+        android:paddingTop="28dp"
         android:textStyle="bold"
         android:text="@string/search_for_cheap_flights"
         android:gravity="center" />
@@ -28,15 +28,14 @@
         android:layout_height="wrap_content"
         android:textAppearance="@style/TicketFound.TextAppearance.Title1"
         android:textStyle="bold"
+        android:paddingBottom="19dp"
+        android:paddingHorizontal="16dp"
         android:text="@string/offers_list_title"/>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <include
+        android:id="@+id/offerList"
+        layout="@layout/lay_offer_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_offer"
-        tools:itemCount="2"/>
-
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
