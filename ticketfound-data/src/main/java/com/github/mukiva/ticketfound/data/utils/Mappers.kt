@@ -95,13 +95,13 @@ internal fun asDataArrival(dto: ArrivalDto): Arrival {
 internal fun asDataLuggage(dto: LuggageDto): Luggage {
     return Luggage(
         hasLuggage = dto.hasLuggage,
-        price = Price(dto.price.value),
+        price = Price(dto.price?.value ?: 0),
     )
 }
 
 internal fun asDataHandLuggage(dto: HandLuggageDto): HandLuggage {
     return HandLuggage(
         hasHandLuggage = dto.hasHandLuggage,
-        size =  dto.size
+        size =  dto.size ?: ""
     )
 }

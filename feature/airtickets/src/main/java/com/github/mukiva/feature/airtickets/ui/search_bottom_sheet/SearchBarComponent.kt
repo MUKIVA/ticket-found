@@ -1,5 +1,6 @@
 package com.github.mukiva.feature.airtickets.ui.search_bottom_sheet
 
+import android.view.inputmethod.EditorInfo
 import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.flowWithLifecycle
@@ -23,6 +24,16 @@ internal class SearchBarComponent(
         toSearchField
             .doOnTextChanged { text, _, _, _ ->
                 onToFieldUpdate(text.toString())
+            }
+        toSearchField
+            .setOnEditorActionListener { _, actionId, _ ->
+                when (actionId) {
+                    EditorInfo.IME_ACTION_SEARCH -> {
+                        onSearch()
+                        true
+                    }
+                    else -> false
+                }
             }
         clearButton.setOnClickListener {
             onClear()

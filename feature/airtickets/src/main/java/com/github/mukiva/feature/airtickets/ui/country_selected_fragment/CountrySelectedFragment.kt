@@ -3,21 +3,27 @@ package com.github.mukiva.feature.airtickets.ui.country_selected_fragment
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.github.mukiva.feature.airtickets.R
 import com.github.mukiva.feature.airtickets.databinding.FragmentCountrySelectedBinding
 import com.github.mukiva.feature.airtickets.presentation.SelectedCountryViewModel
+import com.github.mukiva.feature.airtickets.ui.all_tickets_fragment.AllTicketsFragment
 import com.github.mukiva.ticketfound.uikit.component
 import com.github.mukiva.ticketfound.uikit.viewBindings
+import dagger.hilt.android.AndroidEntryPoint
+import java.time.format.DateTimeFormatter
 import java.util.Calendar
 
+@AndroidEntryPoint
 class CountrySelectedFragment : Fragment(R.layout.fragment_country_selected) {
 
     private val mBinding by viewBindings(FragmentCountrySelectedBinding::bind)
     private val mViewModel by viewModels<SelectedCountryViewModel>()
     private val mCalendar = Calendar.getInstance()
+    private val mLocalDateTimeFormatter = DateTimeFormatter.ofPattern("d MMMM")
 
     private val mStartDatePickerListener =
         DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
@@ -57,7 +63,7 @@ class CountrySelectedFragment : Fragment(R.layout.fragment_country_selected) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        savedInstanceState?.let { args ->
+        arguments?.let { args ->
             val from = args.getString(FROM_COUNTRY_KEY) ?: ""
             mViewModel.updateFromCountryName(from)
             val to = args.getString(TO_COUNTRY_KEY) ?: ""
@@ -74,9 +80,20 @@ class CountrySelectedFragment : Fragment(R.layout.fragment_country_selected) {
         mConfigurationComponent.subscribeOnViewModel(mViewModel, viewLifecycleOwner)
 
         mBinding.viewAllTicketsButton.setOnClickListener {
-            findNavController().navigate()
-        }
+            with (AllTicketsFragment) {
+                val selectedCountryState = mViewModel.selectedCountryState.value
+                val configurationState = mViewModel.configurationState.value
 
+                val args = bundleOf(
+                    FROM_COUNTRY_KEY to selectedCountryState.from,
+                    TO_COUNTRY_KEY to selectedCountryState.to,
+                    START_DATE_KEY to mLocalDateTimeFormatter.format(configurationState.startDate),
+                    PERSON_COUNT_KEY to configurationState.personCount
+                )
+
+                findNavController().navigate(R.id.allTicketsFragment, args)
+            }
+        }
     }
 
     private fun showDatePickerDialog(listener: DatePickerDialog.OnDateSetListener) {

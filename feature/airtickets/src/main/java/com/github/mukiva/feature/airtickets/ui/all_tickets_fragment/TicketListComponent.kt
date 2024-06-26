@@ -1,13 +1,13 @@
-package com.github.mukiva.feature.airtickets.ui.country_selected_fragment
+package com.github.mukiva.feature.airtickets.ui.all_tickets_fragment
 
 import androidx.core.view.isVisible
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
-import com.github.mukiva.feature.airtickets.databinding.LayTicketRecommendationBinding
-import com.github.mukiva.feature.airtickets.domain.Ticket
+import com.github.mukiva.feature.airtickets.databinding.LayAllTicketListBinding
+import com.github.mukiva.feature.airtickets.domain.TicketOffers
 import com.github.mukiva.feature.airtickets.presentation.IListState
-import com.github.mukiva.feature.airtickets.presentation.SelectedCountryViewModel
+import com.github.mukiva.feature.airtickets.presentation.TicketsOffersViewModel
 import com.github.mukiva.feature.airtickets.ui.AirTicketsAdapterDelegates
 import com.github.mukiva.ticketfound.uikit.Component
 import com.github.mukiva.ticketfound.uikit.error
@@ -17,20 +17,20 @@ import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
-class TicketListComponent(
-    private val binding: LayTicketRecommendationBinding
-) : Component(), Component.IStateObserverComponent<SelectedCountryViewModel> {
+internal class TicketListComponent(
+    private val binding: LayAllTicketListBinding
+) : Component(), Component.IStateObserverComponent<TicketsOffersViewModel> {
 
-    private val mTicketListAdapter = ListDelegationAdapter(
-        AirTicketsAdapterDelegates.ticketAdapterDelegate
+    private val mAdapter = ListDelegationAdapter(
+         AirTicketsAdapterDelegates.ticketOffersAdapterDelegate
     )
 
     override fun initComponent() = with(binding) {
-        ticketList.adapter = mTicketListAdapter
+        list.adapter = mAdapter
     }
 
     override fun subscribeOnViewModel(
-        viewModel: SelectedCountryViewModel,
+        viewModel: TicketsOffersViewModel,
         owner: LifecycleOwner
     ) {
         viewModel.ticketListState
@@ -39,7 +39,7 @@ class TicketListComponent(
             .launchIn(owner.lifecycleScope)
     }
 
-    private fun updateListState(state: IListState<Ticket>) {
+    private fun updateListState(state: IListState<TicketOffers>) {
         when (state) {
             is IListState.Content -> setContentState(state.data)
             is IListState.Error -> setErrorState()
@@ -47,18 +47,19 @@ class TicketListComponent(
         }
     }
 
-    private fun setContentState(data: List<Ticket>) = with(binding) {
-        ticketListEmptyView.hide()
-        mTicketListAdapter.items = data
-    }
-
     private fun setErrorState() = with(binding) {
-        ticketList.isVisible = false
-        ticketListEmptyView.error()
+        emptyView.error()
+        list.isVisible = false
     }
 
     private fun setLoadingState() = with(binding) {
-        ticketList.isVisible = false
-        ticketListEmptyView.loading()
+        emptyView.loading()
+        list.isVisible = false
+    }
+
+    private fun setContentState(items: List<TicketOffers>) = with(binding) {
+        emptyView.hide()
+        list.isVisible = true
+        mAdapter.items = items
     }
 }

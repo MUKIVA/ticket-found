@@ -22,4 +22,21 @@
     <string name="ticket_recommendation_title">Прямые рельсы</string>
     <string name="view_all_tickets">Посмотреть все билеты</string>
     <string name="subscribe_on_price">Подписка на цену</string>
+
+    <string name="template_range">%1$s-%2$s</string>
+    <string name="template_details">%1$s, %2$s</string>
+    <plurals name="person">
+        <item quantity="zero">%1$d пассажиров</item>
+        <item quantity="one">%1$d пассажир</item>
+        <item quantity="two">%1$d пассажира</item>
+        <item quantity="few">%1$d пассажиров</item>
+        <item quantity="many">%1$d пассажиров</item>
+        <item quantity="other">%1$d пассажиров</item>
+    </plurals>
+
+    <string name="template_no_transfer_travel_time">%1$sч в пути/Без пересадок</string>
+    <string name="template_travel_time">%1$sч в пути</string>
+    <string name="template_airport_info">%1$s \t\t%2$s</string>
+    <string name="price_graph">График цен</string>
+    <string name="floating_filter">Фильтр</string>
 </resources>

@@ -14,6 +14,7 @@
         android:layout_height="24dp"
         android:src="@drawable/ic_arrow_back"
         android:contentDescription="@string/search_tickets"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -40,6 +41,7 @@
         android:layout_height="24dp"
         android:src="@drawable/ic_transition"
         android:contentDescription="@string/search_tickets"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/fromSearchField"
         app:layout_constraintBottom_toBottomOf="@id/fromSearchField" />
@@ -78,6 +80,7 @@
         android:layout_height="24dp"
         android:src="@drawable/ic_clear"
         android:contentDescription="@string/search_tickets"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/toSearchField"
         app:layout_constraintBottom_toBottomOf="@id/toSearchField"/>

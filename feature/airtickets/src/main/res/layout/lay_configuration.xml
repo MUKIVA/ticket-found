@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView 
+<HorizontalScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
+    android:clipToPadding="false"
     android:orientation="horizontal">
-    
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -18,7 +20,9 @@
             android:textAppearance="@style/TicketFound.TextAppearance.Title4"
             android:text="@string/configuration_back"
             android:textStyle="italic"
+            android:clipToOutline="true"
             android:backgroundTint="@color/button_dark_background"
+            android:foreground="?attr/selectableItemBackground"
             android:drawableStart="@drawable/ic_plus"
             android:drawablePadding="8dp" />
 
@@ -31,7 +35,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/TicketFound.DefaultButton.Small"
+            android:clipToOutline="true"
             android:textAppearance="@style/TicketFound.TextAppearance.Title4"
+            android:foreground="?attr/selectableItemBackground"
             tools:text="24 фев, сб"
             android:textStyle="italic"
             android:backgroundTint="@color/button_dark_background" />
@@ -48,8 +54,10 @@
             android:textAppearance="@style/TicketFound.TextAppearance.Title4"
             android:text="@string/configuration_person_mock"
             android:textStyle="italic"
+            android:clipToOutline="true"
             android:backgroundTint="@color/button_dark_background"
-            android:drawableStart="@drawable/ic_human"
+            android:foreground="?attr/selectableItemBackground"
+            android:drawableStart="@drawable/ic_human_small"
             android:drawablePadding="8dp" />
 
         <Space
@@ -64,10 +72,12 @@
             android:textAppearance="@style/TicketFound.TextAppearance.Title4"
             android:text="@string/configuration_filter"
             android:textStyle="italic"
+            android:clipToOutline="true"
             android:backgroundTint="@color/button_dark_background"
+            android:foreground="?attr/selectableItemBackground"
             android:drawableStart="@drawable/ic_filter"
             android:drawablePadding="8dp" />
 
     </LinearLayout>
 
-</ScrollView>
+</HorizontalScrollView>

@@ -2,7 +2,7 @@ package com.github.mukiva.ticketfound.data.models
 
 data class Ticket(
     val id: Int,
-    val badge: String,
+    val badge: String?,
     val price: Price,
     val providerName: String,
     val company: String,

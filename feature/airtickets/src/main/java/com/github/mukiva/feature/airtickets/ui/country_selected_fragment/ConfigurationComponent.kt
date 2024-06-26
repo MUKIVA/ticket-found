@@ -27,10 +27,12 @@ class ConfigurationComponent(
 ) : Component(), Component.IStateObserverComponent<SelectedCountryViewModel> {
 
     private val mDateFormatter: DateTimeFormatter =
-        DateTimeFormatter.ofPattern("'dd' 'LLL', 'EEEE'", Locale.getDefault())
+        DateTimeFormatter.ofPattern("dd LLL, EEE", Locale.getDefault())
 
     override fun initComponent() = with(binding) {
         initButtons()
+        root.isHorizontalScrollBarEnabled = false
+        root.isVerticalScrollBarEnabled = false
     }
 
     override fun subscribeOnViewModel(
@@ -58,21 +60,12 @@ class ConfigurationComponent(
     }
 
     private fun updateBackDateState(date: LocalDateTime?) {
-        when (date) {
-            null -> setBackDateStateDefault()
-            else -> setBackDateState(date)
-        }
+        date?.let { setBackDateState(date) }
     }
 
     private fun setBackDateState(date: LocalDateTime) = with(binding) {
         backConfiguration.text = mDateFormatter.format(date)
         backConfiguration.setCompoundDrawables(null, null, null, null)
-    }
-
-    private fun setBackDateStateDefault() = with(binding) {
-        backConfiguration.text = root.context.getString(R.string.configuration_back)
-        val drawable = AppCompatResources.getDrawable(root.context, UiKitRes.drawable.ic_plus)
-        backConfiguration.setCompoundDrawables(drawable, null, null, null)
     }
 
     private fun initButtons() = with(binding) {

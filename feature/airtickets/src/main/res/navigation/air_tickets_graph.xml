@@ -20,6 +20,9 @@
         <action
             android:id="@+id/action_airTicketsFragment_to_hotTicketsFragment"
             app:destination="@id/hotTicketsFragment" />
+        <action
+            android:id="@+id/action_airTicketsFragment_to_countrySelectedFragment"
+            app:destination="@id/countrySelectedFragment" />
     </fragment>
     <fragment
         android:id="@+id/hardRouteFragment"
@@ -37,4 +40,16 @@
         android:id="@+id/hotTicketsFragment"
         android:name="com.github.mukiva.feature.airtickets.ui.HotTicketsFragment"
         android:label="HotTicketsFragment" />
+    <fragment
+        android:id="@+id/countrySelectedFragment"
+        android:name="com.github.mukiva.feature.airtickets.ui.country_selected_fragment.CountrySelectedFragment"
+        android:label="CountrySelectedFragment" >
+        <action
+            android:id="@+id/action_countrySelectedFragment_to_allTicketsFragment"
+            app:destination="@id/allTicketsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allTicketsFragment"
+        android:name="com.github.mukiva.feature.airtickets.ui.all_tickets_fragment.AllTicketsFragment"
+        android:label="AllTicketsFragment" />
 </navigation>

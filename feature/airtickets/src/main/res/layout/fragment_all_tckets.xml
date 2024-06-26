@@ -1,8 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:paddingHorizontal="16dp">
+        <include
+            android:id="@+id/layActionBar"
+            layout="@layout/lay_all_tickets_action_bar" />
+
+        <include
+            android:id="@+id/layAllTicketsList"
+            layout="@layout/lay_all_ticket_list" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_gravity="center|bottom"
+        android:orientation="horizontal"
+        android:background="@drawable/background_badge"
+        android:paddingHorizontal="10dp"
+        android:gravity="center"
+        android:translationY="4dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/filterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_filter"
+            android:text="@string/floating_filter"
+            android:textAppearance="@style/TicketFound.TextAppearance.Title4"
+            android:background="@android:color/transparent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/graphicButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_graph"
+            android:text="@string/price_graph"
+            android:textAppearance="@style/TicketFound.TextAppearance.Title4"
+            android:background="@android:color/transparent" />
 
 
-</LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

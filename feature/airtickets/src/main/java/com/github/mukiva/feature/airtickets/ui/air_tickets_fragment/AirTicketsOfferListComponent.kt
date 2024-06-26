@@ -11,7 +11,7 @@ import com.github.mukiva.feature.airtickets.R
 import com.github.mukiva.feature.airtickets.databinding.LayOfferListBinding
 import com.github.mukiva.feature.airtickets.domain.Offer
 import com.github.mukiva.feature.airtickets.presentation.AirTicketsViewModel
-import com.github.mukiva.feature.airtickets.presentation.IOffersState
+import com.github.mukiva.feature.airtickets.presentation.IListState
 import com.github.mukiva.feature.airtickets.ui.AirTicketsAdapterDelegates
 import com.github.mukiva.ticketfound.uikit.Component
 import com.github.mukiva.ticketfound.uikit.error
@@ -69,11 +69,11 @@ internal class AirTicketsOfferListComponent(
             .launchIn(owner.lifecycleScope)
     }
 
-    private fun onStateUpdate(state: IOffersState) {
+    private fun onStateUpdate(state: IListState<Offer>) {
         when (state) {
-            is IOffersState.Content -> setContentState(state.offers)
-            IOffersState.Error -> setErrorState()
-            IOffersState.Loading -> setLoadingState()
+            is IListState.Content -> setContentState(state.data)
+            is IListState.Error -> setErrorState()
+            is IListState.Loading -> setLoadingState()
         }
     }
 

@@ -14,7 +14,6 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import java.time.LocalDate
-import java.time.LocalDateTime
 import javax.inject.Inject
 
 @HiltViewModel
@@ -28,13 +27,13 @@ class SelectedCountryViewModel @Inject constructor(
     val configurationState: StateFlow<ConfigurationState>
         get() = mConfigurationStateFlow.asStateFlow()
 
-    val ticketListState: StateFlow<ITicketListState>
+    val ticketListState: StateFlow<IListState<Ticket>>
         get() = getTicketListUseCase()
             .map(::requestAsTicketListState)
             .stateIn(
                 scope = viewModelScope,
                 started = SharingStarted.Lazily,
-                initialValue = ITicketListState.Loading
+                initialValue = IListState.Loading<Ticket>()
             )
 
     private val mSelectedCountryStateFlow = MutableStateFlow(SearchState.default())
@@ -84,11 +83,11 @@ class SelectedCountryViewModel @Inject constructor(
 
     private fun requestAsTicketListState(
         requestResult: RequestResult<List<Ticket>>
-    ): ITicketListState {
+    ): IListState<Ticket> {
         return when (requestResult) {
-            is RequestResult.Error -> ITicketListState.Error
-            is RequestResult.InProgress -> ITicketListState.Loading
-            is RequestResult.Success -> ITicketListState.Content(requestResult.data)
+            is RequestResult.Error -> IListState.Error()
+            is RequestResult.InProgress -> IListState.Loading()
+            is RequestResult.Success -> IListState.Content(requestResult.data)
         }
     }
 }

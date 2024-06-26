@@ -3,11 +3,13 @@ package com.github.mukiva.feature.airtickets.ui.search_bottom_sheet
 import android.app.Dialog
 import android.os.Bundle
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.github.mukiva.feature.airtickets.R
 import com.github.mukiva.feature.airtickets.databinding.FragmentSearchBinding
 import com.github.mukiva.feature.airtickets.presentation.AirTicketsViewModel
+import com.github.mukiva.feature.airtickets.ui.country_selected_fragment.CountrySelectedFragment
 import com.github.mukiva.ticketfound.uikit.component
 import com.github.mukiva.ticketfound.uikit.viewBindings
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -27,7 +29,7 @@ internal class SearchBottomSheet : BottomSheetDialogFragment(R.layout.fragment_s
         SearchBarComponent(
             binding = mBinding.laySearch,
             onToFieldUpdate = mViewModel::updateToSearch,
-            onSearch = {  },
+            onSearch = { navigateSelectedCountryFragment() },
             onClear = mViewModel::clearToSearch
         )
     }
@@ -59,5 +61,18 @@ internal class SearchBottomSheet : BottomSheetDialogFragment(R.layout.fragment_s
         mSearchComponent.initComponent()
         mSearchComponent.subscribeOnViewModel(mViewModel, viewLifecycleOwner)
 
+    }
+
+    private fun navigateSelectedCountryFragment() {
+        val to = mViewModel.searchStateFlow.value.value.to
+        val from = mViewModel.searchStateFlow.value.value.from
+
+        val args = bundleOf(
+            CountrySelectedFragment.TO_COUNTRY_KEY to to,
+            CountrySelectedFragment.FROM_COUNTRY_KEY to from
+        )
+
+        findNavController()
+            .navigate(R.id.countrySelectedFragment, args)
     }
 }

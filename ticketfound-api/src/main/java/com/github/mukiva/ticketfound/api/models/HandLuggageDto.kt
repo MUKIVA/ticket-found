@@ -8,5 +8,5 @@ data class HandLuggageDto(
     @SerialName("has_hand_luggage")
     val hasHandLuggage: Boolean,
     @SerialName("size")
-    val size: String,
+    val size: String? = null,
 )

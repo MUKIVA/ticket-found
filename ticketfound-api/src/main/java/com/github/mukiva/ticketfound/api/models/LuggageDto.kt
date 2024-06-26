@@ -8,5 +8,5 @@ data class LuggageDto(
     @SerialName("has_luggage")
     val hasLuggage: Boolean,
     @SerialName("price")
-    val price: Price
+    val price: Price? = null
 )

@@ -8,7 +8,7 @@ data class TicketDto(
     @SerialName("id")
     val id: Int,
     @SerialName("badge")
-    val badge: String,
+    val badge: String? = null,
     @SerialName("price")
     val price: Price,
     @SerialName("provider_name")
@@ -29,7 +29,7 @@ data class TicketDto(
     val handLuggage: HandLuggageDto,
     @SerialName("is_returnable")
     val isReturnable: Boolean,
-    @SerialName("isExchangable")
+    @SerialName("is_exchangable")
     val isExchangable: Boolean
 
 )
