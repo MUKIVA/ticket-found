@@ -1,5 +1,6 @@
 package com.github.mukiva.feature.airtickets.ui.air_tickets_fragment
 
+import android.view.View
 import android.view.inputmethod.EditorInfo
 import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.LifecycleOwner
@@ -16,7 +17,6 @@ import kotlinx.coroutines.flow.onEach
 internal class AirTicketsSearchComponent(
     private val binding: LaySearchCardBinding,
     private val onFromFieldUpdate: (String) -> Unit,
-    private val onToFieldUpdate: (String) -> Unit,
     private val onSearch: () -> Unit
 ) : Component(), Component.IStateObserverComponent<AirTicketsViewModel> {
 
@@ -26,19 +26,11 @@ internal class AirTicketsSearchComponent(
                 onFromFieldUpdate(text.toString())
             }
         binding.toSearchField
-            .doOnTextChanged { text, _, _, _ ->
-                onToFieldUpdate(text.toString())
+            .onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
+            if (hasFocus) {
+                onSearch()
             }
-        binding.toSearchField
-            .setOnEditorActionListener { _, actionId, _ ->
-                when (actionId) {
-                    EditorInfo.IME_ACTION_SEARCH -> {
-                        onSearch()
-                        true
-                    }
-                    else -> false
-                }
-            }
+        }
     }
 
     override fun subscribeOnViewModel(

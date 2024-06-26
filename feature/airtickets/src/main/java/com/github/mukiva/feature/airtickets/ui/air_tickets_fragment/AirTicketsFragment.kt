@@ -22,7 +22,6 @@ internal class AirTicketsFragment : Fragment(R.layout.fragment_air_tickets) {
         AirTicketsSearchComponent(
             binding = mBinding.search,
             onFromFieldUpdate = mViewModel::updateFromSearch,
-            onToFieldUpdate = mViewModel::updateToSearch,
             onSearch = { showSearchBottomSheet() }
         )
     }
