@@ -60,7 +60,7 @@ class AllTicketsFragment : Fragment(R.layout.fragment_all_tckets) {
         transition.text = getString(R.string.template_range, from, to)
         val personCountString = requireContext().resources
             .getQuantityString(R.plurals.person, personCount, personCount)
-        details.text = getString(R.string.template_range, date, personCountString)
+        details.text = getString(R.string.template_details, date, personCountString)
     }
 
     private fun initFloatingButtons() = with(mBinding) {
