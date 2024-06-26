@@ -45,6 +45,8 @@ object AirTicketsAdapterDelegates {
         bind {
             binding.companyName.text = item.companyName
             binding.timeRange.text = item.timeRange.joinToString(separator = " ")
+            binding.price.text =
+                getString(UiKitRes.string.rub_template, item.price.formatAsCurrency())
         }
     }
 

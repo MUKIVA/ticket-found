@@ -29,9 +29,9 @@ class TicketFoundMockApi internal constructor(
     private fun <T> wrapTry(block: () -> T): Result<T> {
         return try {
             val obj = block()
-            Result.success<T>(obj)
+            Result.success(obj)
         } catch (cause: Exception) {
-            Result.failure<T>(cause)
+            Result.failure(cause)
         }
     }
 

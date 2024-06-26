@@ -26,6 +26,7 @@ class GetTicketListUseCase @Inject constructor(
         offerTickets: OfferTickets
     ): Ticket {
         return Ticket(
+            id = offerTickets.id,
             companyName = offerTickets.title,
             timeRange = offerTickets.timeRange,
             price = offerTickets.price.value,
