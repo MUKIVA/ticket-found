@@ -43,6 +43,11 @@ internal class AirTicketsFragment : Fragment(R.layout.fragment_air_tickets) {
         mOfferListComponent.subscribeOnViewModel(mViewModel, viewLifecycleOwner)
     }
 
+    override fun onStop() {
+        super.onStop()
+        mViewModel.rememberLastFromLocation()
+    }
+
     private fun showSearchBottomSheet() {
         val bottomSheet = SearchBottomSheet()
         bottomSheet.show(childFragmentManager, SEARCH_BOTTOM_SHEET_TAG)

@@ -27,12 +27,12 @@ class CountrySelectedFragment : Fragment(R.layout.fragment_country_selected) {
 
     private val mStartDatePickerListener =
         DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
-            mViewModel.updateStartDate(year, month, dayOfMonth)
+            mViewModel.updateStartDate(year, month + 1, dayOfMonth)
         }
 
     private val mEndDatePickerListener =
         DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
-            mViewModel.updateEndDate(year, month, dayOfMonth)
+            mViewModel.updateEndDate(year, month + 1, dayOfMonth)
         }
 
     private val mActionBarComponent by component {

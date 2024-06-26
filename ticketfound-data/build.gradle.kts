@@ -12,4 +12,6 @@ dependencies {
     implementation(projects.ticketfoundApi)
 
     implementation(libs.kotlinx.coroutines.android)
+
+    implementation(libs.androidx.datastore)
 }

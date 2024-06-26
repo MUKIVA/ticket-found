@@ -1,24 +1,27 @@
 package com.github.mukiva.feature.airtickets.presentation
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.github.mukiva.feature.airtickets.domain.Offer
 import com.github.mukiva.feature.airtickets.domain.usecase.GetOffersUseCase
+import com.github.mukiva.ticketfound.data.ISettingsDataStore
 import com.github.mukiva.ticketfound.data.utils.RequestResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 internal class AirTicketsViewModel @Inject constructor(
-    private val getOffersUseCase: GetOffersUseCase
+    private val getOffersUseCase: GetOffersUseCase,
+    private val settings: ISettingsDataStore
 ) : ViewModel() {
 
     val searchStateFlow: StateFlow<LinkWrapper<SearchState>>
@@ -34,6 +37,10 @@ internal class AirTicketsViewModel @Inject constructor(
             )
     private val mSearchStateFlow =
         MutableStateFlow(LinkWrapper(SearchState.default()))
+
+    init {
+        restoreLastFromLocation()
+    }
 
     fun updateFromSearch(text: String) {
         mSearchStateFlow.update { state ->
@@ -59,8 +66,28 @@ internal class AirTicketsViewModel @Inject constructor(
         }
     }
 
+    fun rememberLastFromLocation() {
+        viewModelScope.launch {
+            val location = mSearchStateFlow.value.value.from
+            settings.setLastFromLocation(location)
+        }
+    }
+
+    private fun restoreLastFromLocation() {
+        viewModelScope.launch {
+            val lastFromLocation = settings.getLastFromLocation()
+                .first()
+            mSearchStateFlow.update { state ->
+                LinkWrapper(
+                    state.value.copy(
+                        from = lastFromLocation
+                    )
+                )
+            }
+        }
+    }
+
     private fun cyrillicFilter(text: String): String {
-        Log.d("SEARCH", text)
         return text.filter { ch ->
             ch in mLowerCaseCyrillicRange || ch in mUpperCaseCyrillicRange || ch == 'ё' || ch == 'Ё'
         }

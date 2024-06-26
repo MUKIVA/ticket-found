@@ -5,7 +5,9 @@ import com.github.mukiva.ticketfound.BuildConfig
 import com.github.mukiva.ticketfound.api.ITicketFoundApi
 import com.github.mukiva.ticketfound.api.createMockTicketFoundApi
 import com.github.mukiva.ticketfound.api.createRetrofit
+import com.github.mukiva.ticketfound.data.ISettingsDataStore
 import com.github.mukiva.ticketfound.data.createOffersRepository
+import com.github.mukiva.ticketfound.data.createSettingsRepository
 import com.github.mukiva.ticketfound.data.createTicketsOffersRepository
 import com.github.mukiva.ticketfound.data.createTicketsRepository
 import dagger.Module
@@ -67,5 +69,11 @@ class DataModule {
     fun provideOffersRepository(
         api: ITicketFoundApi
     ) = createOffersRepository(api)
+
+    @Provides
+    @Singleton
+    fun provideSettingsRepository(
+        @ApplicationContext context: Context
+    ): ISettingsDataStore = createSettingsRepository(context)
 
 }
