@@ -4,7 +4,9 @@ import androidx.annotation.DrawableRes
 import com.github.mukiva.feature.airtickets.R
 import com.github.mukiva.ticketfound.uikit.R as UiKitRes
 import com.github.mukiva.feature.airtickets.databinding.ItemOfferBinding
+import com.github.mukiva.feature.airtickets.databinding.ItemTicketBinding
 import com.github.mukiva.feature.airtickets.domain.Offer
+import com.github.mukiva.feature.airtickets.domain.Ticket
 import com.github.mukiva.ticketfound.uikit.formatAsCurrency
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 
@@ -18,6 +20,7 @@ internal fun idAsMockImageRes(id: Int): Int {
 }
 
 object AirTicketsAdapterDelegates {
+
     val offerAdapterDelegate = adapterDelegateViewBinding<Offer, Any, ItemOfferBinding>(
         { inflater, root -> ItemOfferBinding.inflate(inflater, root, false) }
     ) {
@@ -27,6 +30,15 @@ object AirTicketsAdapterDelegates {
             binding.town.text = item.town
             binding.price.text =
                 getString(UiKitRes.string.rub_template, item.price.formatAsCurrency())
+        }
+    }
+
+    val ticketAdapterDelegate = adapterDelegateViewBinding<Ticket, Any, ItemTicketBinding>(
+        { inflater, root -> ItemTicketBinding.inflate(inflater, root, false) }
+    ) {
+        bind {
+            binding.companyName.text = item.companyName
+            binding.timeRange.text = item.timeRange.joinToString(separator = " ")
         }
     }
 }

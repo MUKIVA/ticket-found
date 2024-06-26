@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/backConfiguration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TicketFound.DefaultButton.Small"
+            android:textAppearance="@style/TicketFound.TextAppearance.Title4"
+            android:text="@string/configuration_back"
+            android:textStyle="italic"
+            android:backgroundTint="@color/button_dark_background"
+            android:drawableStart="@drawable/ic_plus"
+            android:drawablePadding="8dp" />
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="match_parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/startConfiguration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TicketFound.DefaultButton.Small"
+            android:textAppearance="@style/TicketFound.TextAppearance.Title4"
+            tools:text="24 фев, сб"
+            android:textStyle="italic"
+            android:backgroundTint="@color/button_dark_background" />
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="match_parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/personConfiguration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TicketFound.DefaultButton.Small"
+            android:textAppearance="@style/TicketFound.TextAppearance.Title4"
+            android:text="@string/configuration_person_mock"
+            android:textStyle="italic"
+            android:backgroundTint="@color/button_dark_background"
+            android:drawableStart="@drawable/ic_human"
+            android:drawablePadding="8dp" />
+
+        <Space
+            android:layout_width="21dp"
+            android:layout_height="match_parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/filterConfiguration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TicketFound.DefaultButton.Small"
+            android:textAppearance="@style/TicketFound.TextAppearance.Title4"
+            android:text="@string/configuration_filter"
+            android:textStyle="italic"
+            android:backgroundTint="@color/button_dark_background"
+            android:drawableStart="@drawable/ic_filter"
+            android:drawablePadding="8dp" />
+
+    </LinearLayout>
+
+</ScrollView>

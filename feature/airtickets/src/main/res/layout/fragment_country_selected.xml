@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="47dp"
+    android:orientation="vertical">
+    
+    <include
+        android:id="@+id/laySelectedBar"
+        layout="@layout/lay_selected_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="13dp" />
+    
+    <include
+        android:id="@+id/layConfiguration"
+        layout="@layout/lay_configuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="12dp" />
+
+    <include
+        android:id="@+id/layTicketRecommendation"
+        layout="@layout/lay_ticket_recommendation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="23dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/viewAllTicketsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TicketFound.DefaultButton.Accent"
+        android:textAppearance="@style/TicketFound.TextAppearance.Title2"
+        android:textStyle="italic"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/view_all_tickets" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_frame"
+        android:backgroundTint="@color/gray_2"
+        android:layout_marginHorizontal="16dp"
+        android:padding="16dp">
+        
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center|start"
+            android:drawableStart="@drawable/ic_notification"
+            android:drawableTint="@color/blue"
+            android:drawablePadding="8dp"
+            android:text="@string/subscribe_on_price"
+            android:textAppearance="@style/TicketFound.TextAppearance.Text1"
+            android:layout_weight="1"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

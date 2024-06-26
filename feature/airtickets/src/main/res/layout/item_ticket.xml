@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingVertical="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/mark"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/background_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/companyName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TicketFound.TextAppearance.Title4"
+        android:textStyle="italic"
+        android:paddingStart="8dp"
+        tools:text="Уральские авиалинии"
+        android:paddingBottom="4dp"
+        app:layout_constraintStart_toEndOf="@id/mark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/price"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TicketFound.TextAppearance.Title4"
+        android:textStyle="italic"
+        android:drawableEnd="@drawable/ic_arrow_forward"
+        android:drawableTint="@color/blue"
+        tools:text="2 000 $"
+        android:textColor="@color/blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/timeRange"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TicketFound.TextAppearance.Title4"
+        android:textStyle="italic"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingStart="8dp"
+        android:layout_marginBottom="10dp"
+        tools:text="07:00 09:10 10:00 11:00 12:00 07:00 09:10 10:00 11:00 12:00"
+        app:layout_constraintStart_toEndOf="@id/mark"
+        app:layout_constraintTop_toBottomOf="@id/companyName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

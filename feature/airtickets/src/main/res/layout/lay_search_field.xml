@@ -36,6 +36,8 @@
             android:textAppearance="@style/TicketFound.TextAppearance.ButtonText1"
             android:hint="@string/to_search_field_hint"
             android:maxLines="1"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
             android:paddingVertical="8dp"
             android:background="@android:color/transparent">
 

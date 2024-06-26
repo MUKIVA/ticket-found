@@ -15,4 +15,11 @@
     <string name="mock_recommendation_1">Стамбул</string>
     <string name="mock_recommendation_2">Сочи</string>
     <string name="mock_recommendation_3">Пхукет</string>
+
+    <string name="configuration_back">обратно</string>
+    <string name="configuration_person_mock">1,эконом</string>
+    <string name="configuration_filter">фильтры</string>
+    <string name="ticket_recommendation_title">Прямые рельсы</string>
+    <string name="view_all_tickets">Посмотреть все билеты</string>
+    <string name="subscribe_on_price">Подписка на цену</string>
 </resources>

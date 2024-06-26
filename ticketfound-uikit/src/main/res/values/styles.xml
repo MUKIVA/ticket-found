@@ -65,6 +65,7 @@
     <style name="TicketFound.DefaultButton.Small">
         <item name="android:background">@drawable/background_button_small</item>
         <item name="android:textColor">@color/button_small_text</item>
+        <item name="android:padding">4dp</item>
         <item name="android:minHeight">33dp</item>
     </style>
 

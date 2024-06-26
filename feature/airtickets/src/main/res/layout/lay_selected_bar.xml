@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_frame"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/navigateBackButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_arrow_back"
+        android:contentDescription="@string/search_tickets"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fromSearchField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:paddingVertical="8dp"
+        android:textAppearance="@style/TicketFound.TextAppearance.ButtonText1"
+        android:background="@android:color/transparent"
+        android:hint="@string/from_search_field_hint"
+        android:maxLines="1"
+        tools:text="Минск"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/navigateBackButton" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/swapButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_transition"
+        android:contentDescription="@string/search_tickets"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fromSearchField"
+        app:layout_constraintBottom_toBottomOf="@id/fromSearchField" />
+
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/navigateBackButton"
+        app:layout_constraintTop_toBottomOf="@id/fromSearchField"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/toSearchField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:paddingVertical="8dp"
+        android:textAppearance="@style/TicketFound.TextAppearance.ButtonText1"
+        android:background="@android:color/transparent"
+        android:hint="@string/to_search_field_hint"
+        android:maxLines="1"
+        tools:text="Сочи"
+        android:textStyle="bold"
+        android:paddingEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@id/fromSearchField"
+        app:layout_constraintStart_toEndOf="@id/navigateBackButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/clearButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_clear"
+        android:contentDescription="@string/search_tickets"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toSearchField"
+        app:layout_constraintBottom_toBottomOf="@id/toSearchField"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

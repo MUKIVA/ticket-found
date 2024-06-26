@@ -1,7 +1,6 @@
 package com.github.mukiva.feature.airtickets.ui.air_tickets_fragment
 
 import android.view.View
-import android.view.inputmethod.EditorInfo
 import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.flowWithLifecycle
@@ -26,7 +25,7 @@ internal class AirTicketsSearchComponent(
                 onFromFieldUpdate(text.toString())
             }
         binding.toSearchField
-            .onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
+            .onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
             if (hasFocus) {
                 onSearch()
             }
