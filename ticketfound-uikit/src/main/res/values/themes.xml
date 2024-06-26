@@ -3,7 +3,12 @@
     <style name="Theme.TicketFound" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:colorPrimary">@color/blue</item>
         <item name="colorOnPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/black</item>
         <item name="bottomNavigationStyle">@style/TicketFound.BottomNavigation</item>
         <item name="bottomSheetStyle">@style/TicketFound.BottomSheet</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="statusBarBackground">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
     </style>
 </resources>

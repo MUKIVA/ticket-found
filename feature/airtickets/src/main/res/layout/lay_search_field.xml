@@ -15,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="8dp"
+        android:textColorHint="@color/gray_6"
         android:textAppearance="@style/TicketFound.TextAppearance.ButtonText1"
         tools:text="Минск" />
     <com.google.android.material.divider.MaterialDivider
@@ -31,6 +32,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColorHint="@color/gray_6"
             android:drawableStart="@drawable/ic_search"
             android:drawablePadding="8dp"
             android:textAppearance="@style/TicketFound.TextAppearance.ButtonText1"
